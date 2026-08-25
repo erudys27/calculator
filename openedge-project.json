@@ -1,7 +1,7 @@
 {
   "name": "calculator-package",
-  "version": "1.0.0",
-  "package_name": "ba.calculator",
+  "version": "1.0.1",
+  "package_name": "calculator",
   "dependencies": {
     "ba.greeter": "^1.0.0"
   },

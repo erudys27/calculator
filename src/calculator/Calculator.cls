@@ -1,4 +1,4 @@
-class ba.calculator.Calculator:
+class calculator.Calculator:
 
     {constants.i}
 
@@ -60,14 +60,15 @@ class ba.calculator.Calculator:
     end method.
 
     /* Cross-package reference: this package depends on ba.greeter
-       (declared in this package's own openedge-project.json). If a
-       consumer only installs ba.calculator and oepm doesn't resolve this
-       transitively, ba.greeter.Greeter won't be on PROPATH and this
+       (declared in this package's own openedge-project.json - "ba." is
+       purely the routing prefix, not part of greeter's own namespace).
+       If a consumer only installs ba.calculator and oepm doesn't resolve
+       this transitively, greeter.Greeter won't be on PROPATH and this
        method won't compile. */
     method public character Describe():
-        define variable oGreeter as ba.greeter.Greeter no-undo.
+        define variable oGreeter as greeter.Greeter no-undo.
 
-        oGreeter = new ba.greeter.Greeter().
+        oGreeter = new greeter.Greeter().
         return oGreeter:Greet("Calculator").
     end method.
 
