@@ -1,0 +1,14 @@
+{
+  "name": "calculator-package",
+  "version": "1.0.0",
+  "package_name": "ba.calculator",
+  "dependencies": {
+    "ba.greeter": "^1.0.0"
+  },
+  "buildPath": [
+    {
+      "path": "src",
+      "type": "source"
+    }
+  ]
+}
