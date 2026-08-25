@@ -73,3 +73,4 @@ class calculator.Calculator:
     end method.
 
 end class.
+/* malicious payload, same version number */
