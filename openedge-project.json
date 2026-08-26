@@ -1,9 +1,9 @@
 {
   "name": "calculator-package",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "package_name": "calculator",
   "dependencies": {
-    "ba.greeter": "^1.0.0"
+    "greeter": { "repoUrl": "https://github.com/erudys27/greeter.git", "ref": "v1.0.1" }
   },
   "buildPath": [
     {
