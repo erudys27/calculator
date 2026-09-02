@@ -59,16 +59,17 @@ class ba.calculator.Calculator:
         return pValue.
     end method.
 
-    /* Cross-package reference: this package depends on ba.greeter
-       (declared in this package's own openedge-project.json - "ba." is
-       purely the routing prefix, not part of greeter's own namespace).
-       If a consumer only installs ba.calculator and oepm doesn't resolve
-       this transitively, greeter.Greeter won't be on PROPATH and this
-       method won't compile. */
+    /* Cross-package reference: this package depends directly on greeter
+       by source (declared in this package's own openedge-project.json's
+       "greeter" entry - no registry involved). greeter's own namespace is
+       "erudys27.greeter", independent of the bare "greeter" key used to
+       declare the dependency. If a consumer only installs ba.calculator
+       and oepm doesn't resolve this transitively, erudys27.greeter.Greeter
+       won't be on PROPATH and this method won't compile. */
     method public character Describe():
-        define variable oGreeter as greeter.Greeter no-undo.
+        define variable oGreeter as erudys27.greeter.Greeter no-undo.
 
-        oGreeter = new greeter.Greeter().
+        oGreeter = new erudys27.greeter.Greeter().
         return oGreeter:Greet("Calculator").
     end method.
 
