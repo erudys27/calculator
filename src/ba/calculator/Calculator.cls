@@ -1,4 +1,4 @@
-class calculator.Calculator:
+class ba.calculator.Calculator:
 
     {constants.i}
 
