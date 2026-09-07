@@ -59,6 +59,14 @@ class ba.calculator.Calculator:
         return pValue.
     end method.
 
+    /* Added in v1.0.5 - a real, small change to demonstrate multi-version
+       registry support: this version's catalog reference is added
+       alongside v1.0.4's, not replacing it, so a consumer still pinned to
+       an older-but-compatible caret range keeps resolving correctly. */
+    method public integer Square(input pValue as integer):
+        return pValue * pValue.
+    end method.
+
     /* Cross-package reference: this package depends directly on greeter
        by source (declared in this package's own openedge-project.json's
        "greeter" entry - no registry involved). greeter's own namespace is
